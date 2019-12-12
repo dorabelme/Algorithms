@@ -16,10 +16,10 @@ def recipe_batches(recipe, ingredients):
         if batches == 0:
             return 0
 
-        if not total_batches:
-            total_batches = batches
-        else:
+        if total_batches:
             total_batches = min(total_batches, batches)
+        else:
+            total_batches = batches
 
     return total_batches
 
