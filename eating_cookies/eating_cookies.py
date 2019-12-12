@@ -19,12 +19,16 @@ def eating_cookies(n, cache={}):
     if n == 3:
         return 4
     # top-down dynamic solution
+    print(n)
     if n not in cache:
         cache[n] = eating_cookies(
             n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
         print(cache[n])
+
     return cache[n]
 
+
+print(eating_cookies(4))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
